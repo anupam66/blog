@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/3.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.0/ref/settings/
 """
-
+import django_heroku
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -25,7 +25,7 @@ SECRET_KEY = 'i(j3oaf-nyj$moi&m6*km4wkh($^7&b(40jl+1s^7gg1hx%!94'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','smartblogger.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1','smartblogger.herokuapp.com','localhost']
 
 
 # Application definition
@@ -130,3 +130,4 @@ MEDIA_ROOT = os.path.join(BASE_DIR,"media")
 # FROALA_UPLOAD_PATH = os.path.join(BASE_DIR,"media")
 # FILE_UPLOAD_PATH = os.path.join(MEDIA_ROOT, 'media')
 
+django_heroku.settings(locals())
